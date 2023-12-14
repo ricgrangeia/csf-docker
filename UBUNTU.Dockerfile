@@ -14,4 +14,4 @@ RUN tar -xzf csf.tgz && cd csf && sh install.sh
 
 
 
-ENTRYPOINT ["tail", "-f"]
+ENTRYPOINT ["tail", "-f", "/proc/1/fd/1"]
