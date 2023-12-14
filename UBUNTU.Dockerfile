@@ -12,6 +12,6 @@ RUN wget https://download.configserver.com/csf.tgz
 
 RUN tar -xzf csf.tgz && cd csf && sh install.sh
 
-
+RUN apt-get install -y nano
 
 ENTRYPOINT ["tail", "-f", "/proc/1/fd/1"]
