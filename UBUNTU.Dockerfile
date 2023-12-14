@@ -16,4 +16,3 @@ RUN apt-get install -y nano
 
 ENTRYPOINT ["tail", "-f", "/proc/1/fd/1"]
 
-EXPOSE 6666
