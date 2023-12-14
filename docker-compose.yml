@@ -1,4 +1,9 @@
 version: '3.7'
+
+volumes:
+  app-data:
+    name: 'csf-firewall-data'
+
 services:
   csf-firewall:
     build:
@@ -27,7 +32,7 @@ services:
 #        - CSF_WEBMIN_SSL_REDIRECT_HOST=csf-firewall
 #        - CSF_WEBMIN_SSL_REDIRECT_ADDR=
 
-    #volumes:
-      #- /var/log:/var/log:ro
+    volumes:
+        - app-data:/etc/csf
       #- /opt/fail2ban/jail.conf:/etc/fail2ban/jail.conf
       #- /opt/fail2ban/data:/data
