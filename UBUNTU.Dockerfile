@@ -14,4 +14,4 @@ RUN tar -xzf csf.tgz && cd csf && sh install.sh
 
 
 
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+ENTRYPOINT ["tail", "-f"]
