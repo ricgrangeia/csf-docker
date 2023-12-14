@@ -17,8 +17,8 @@ services:
     cap_add:
       - NET_ADMIN
       - NET_RAW
-    ports:
-      - '6666:6666'
+#    ports:
+#      - '6666:6666'
 #    environment:
 #        - TZ=Europe/Lisbon
 #        - CSF_WEBMIN_PORT=10000
