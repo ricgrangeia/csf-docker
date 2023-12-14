@@ -1,0 +1,31 @@
+version: '3.7'
+services:
+  csf-firewall:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "ricardograngeia/csf-firewall:latest"
+    pull_policy: build
+    container_name: "csf-firewall"
+    network_mode: "host"
+    restart: always
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+#    environment:
+#        - TZ=Europe/Lisbon
+#        - CSF_WEBMIN_PORT=10000
+#        - CSF_WEBMIN_USER=root
+#        - CSF_WEBMIN_PASS=123456
+#        - CSF_WEBMIN_THEME=authentic-theme
+#        - CSF_WEBMIN_LANG=en
+#        - CSF_WEBMIN_SSL=1
+#        - CSF_WEBMIN_SSL_REDIRECT=1
+#        - CSF_WEBMIN_SSL_REDIRECT_PORT=10000
+#        - CSF_WEBMIN_SSL_REDIRECT_HOST=csf-firewall
+#        - CSF_WEBMIN_SSL_REDIRECT_ADDR=
+
+    #volumes:
+      #- /var/log:/var/log:ro
+      #- /opt/fail2ban/jail.conf:/etc/fail2ban/jail.conf
+      #- /opt/fail2ban/data:/data
