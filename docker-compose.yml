@@ -3,7 +3,7 @@ services:
   csf-firewall:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: UBUNTU.Dockerfile
     image: "ricardograngeia/csf-firewall:latest"
     pull_policy: build
     container_name: "csf-firewall"

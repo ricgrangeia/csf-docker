@@ -29,4 +29,4 @@ RUN apk add perl-socket6
 
 run apk add nano
 
-#ENTRYPOINT ["top", "-b"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
